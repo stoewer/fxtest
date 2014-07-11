@@ -13,21 +13,19 @@ public class View {
     private static final String CSS_EXT = ".css";
     private static final String FXML_EXT = ".fxml";
 
-    URL styleURL;
-    URL viewURL;
+    private URL styleURL;
 
-    FXMLLoader loader;
-    Injector injector;
+    private FXMLLoader loader;
+    private Injector injector;
 
     @Inject
     public View(Injector injector) {
         this.injector = injector;
 
-        viewURL  = generateViewURL();
         styleURL = generateStyleURL();
 
-        loader   = new FXMLLoader(viewURL);
-        loader.setControllerFactory(someClass -> injector.getInstance(someClass));
+        loader = new FXMLLoader(generateViewURL());
+        loader.setControllerFactory(cls -> injector.getInstance(cls));
     }
 
     public FXMLLoader getLoader() {
