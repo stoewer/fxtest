@@ -18,15 +18,14 @@ public class App extends Application {
         Injector injector = Guice.createInjector(new AppModule());
 
         MainView main = injector.getInstance(MainView.class);
-        Scene scene = new Scene(main.getParent());
+        Scene scene = new Scene(main.getScene());
 
         stage.setTitle("Address Book");
         stage.setScene(scene);
         stage.show();
     }
 
-    public static void main( String[] args )
-    {
+    public static void main( String[] args ) {
         launch(args);
     }
 

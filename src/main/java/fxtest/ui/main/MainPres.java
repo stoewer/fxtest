@@ -1,5 +1,5 @@
 package fxtest.ui.main;
 
-public class MainCtrl {
+public class MainPres {
 
 }
