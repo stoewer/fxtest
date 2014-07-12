@@ -106,6 +106,8 @@
                 <targetPath>${project.build.directory}/classes/resources</targetPath>
                 <includes>
                     <include>**/*.json</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.owl</include>
                 </includes>
             </resource>
 
