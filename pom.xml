@@ -7,7 +7,7 @@
     <groupId>gnode</groupId>
     <artifactId>fxtest</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>fxtest</name>
+    <name>FXTest</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -103,8 +103,8 @@
 
             <resource>
                 <directory>src/main/resources</directory>
+                <targetPath>${project.build.directory}/classes/resources</targetPath>
                 <includes>
-                    <include>**/*.xml</include>
                     <include>**/*.json</include>
                 </includes>
             </resource>
