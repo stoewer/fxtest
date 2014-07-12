@@ -13,12 +13,19 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception
     {
-        setUserAgentStylesheet(STYLESHEET_CASPIAN);
+        setUserAgentStylesheet(STYLESHEET_MODENA);
 
         Injector injector = Guice.createInjector(new AppModule());
 
         MainView main = injector.getInstance(MainView.class);
         Scene scene = new Scene(main.getScene());
+
+        AppState state = injector.getInstance(AppState.class);
+        state.runningProperty().addListener((observable, oldVal, newVal) -> {
+            if (!newVal) {
+                stage.close();
+            }
+        });
 
         stage.setTitle("Address Book");
         stage.setScene(scene);

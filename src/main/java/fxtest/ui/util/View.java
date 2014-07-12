@@ -8,6 +8,13 @@ import javax.inject.Inject;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * Convention over configuration helper class.
+ *
+ * Loads a fxml file and if present a css file with a corresponding
+ * name (class name + .fxml|.css). Further the helper makes the FXMLLoader
+ * use a Guice injector for controller creation.
+ */
 public class View {
 
     private URL styleURL;
