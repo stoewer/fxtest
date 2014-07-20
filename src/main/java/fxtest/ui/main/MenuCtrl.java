@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 
 import javax.inject.Inject;
 
-public class MenuPres {
+public class MenuCtrl {
 
     @Inject
     private AppState state;

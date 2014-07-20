@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainPres  implements Initializable {
+public class MainCtrl implements Initializable {
 
     public BorderPane view;
     @Inject
