@@ -3,6 +3,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/8"
@@ -13,7 +14,19 @@
 
     <!--Main content-->
     <center>
-        <Label text="Hello World!">Hello World!</Label>
+        <TabPane>
+
+            <Tab text="foo">
+                <VBox prefWidth="Infinity" prefHeight="Infinity" styleClass="vbox">
+                    <Label text="Hello" />
+                </VBox>
+            </Tab>
+            <Tab text="bar">
+                <VBox prefWidth="Infinity" prefHeight="Infinity" styleClass="vbox">
+                    <Label text="Hello" />
+                </VBox>
+            </Tab>
+        </TabPane>
     </center>
 
 </BorderPane>
