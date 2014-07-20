@@ -1,5 +1,6 @@
 package fxtest;
 
+import com.aquafx_project.AquaFx;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import fxtest.ui.main.MainView;
@@ -13,7 +14,8 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception
     {
-        setUserAgentStylesheet(STYLESHEET_MODENA);
+        AquaFx.style();
+        //setUserAgentStylesheet(STYLESHEET_MODENA);
 
         Injector injector = Guice.createInjector(new AppModule());
 
